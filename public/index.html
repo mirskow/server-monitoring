@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	 	<title>Server Statistics</title>
+	 	<link rel="stylesheet" href="/static/style.css">
+	 	<script src="/static/script.js"></script>
+	 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+	</head>
+	<body>
+		<header id="header" class="tab">
+			<div>Server Real Time</div>
+	 		<div id="server_time"></div>
+	 	</header>
+	 	<main class="tab">
+	 		<div class="memory flex_block">
+	 			<div class="title_block">
+	 				Memory:
+	 				<hr>
+	 			</div>
+	 			
+	 			<div class="memory_state">
+					<div class="form-container block">
+					    <form>
+					    	<label for="memoryUsage">Critical indicator</label><br>
+						<input type="text" name="memoryUsage" id="memoryUsage" placeholder="Precent memory used">
+						<input type="submit" value="Send" id="butMem">
+					    </form>
+					</div>
+		 			<div class="graph_block block">
+		 				<canvas id="mem"></canvas>
+		 			</div>
+		 			<div>
+			 			<div id="memory_total" class="block"></div>
+			 			<div id="memory_available" class="block"></div>
+			 			<div id="memory_used" class="block"></div>	
+		 			</div>
+		 			<div>
+		 				<button id="reportMem" data-value="memory">Report</button>
+		 			</div>
+	 			</div>
+	 		</div>
+	 		<div class="cpu">
+	 			<div class="title_block">
+	 				CPU:
+	 				<hr>
+	 			</div>
+	 			<div class="cpu_state">
+					<div class="form-container block">
+					    <form>
+					    	<label for="memoryUsage">Critical indicator</label><br>
+						<input type="text" name="cpuUsage" id="cpuUsage" placeholder="CPU Usage">
+						<input type="submit" value="Send" id="butCpu">
+					    </form>
+					</div>
+	 				<div class="block">
+	 					<div id="processes"></div>
+	 					<div id="threads"></div>
+	 				</div>
+		 			<div class="graph_block block">
+		 				<canvas id="cpu_usage"></canvas>
+		 			</div>
+		 			<div class="graph_block block">
+		 				<canvas id="cpu_temp"></canvas>
+		 			</div>	
+		 			<div>
+		 				<button id="reportCpu" data-value="cpu">Report</button>
+		 			</div>
+	 			</div>	
+
+	 		</div>
+	 		<div class="gpu">
+	 			<div class="title_block">
+	 				GPU:
+	 				<hr>
+	 			</div>
+	 			<div class="gpu_state">
+					<div class="form-container block">
+					    <form>
+					    	<label for="memoryUsage">Critical indicator</label><br>
+						<input type="text" name="gpuUsage" id="gpuUsage" placeholder="GPU Usage">
+						<input type="submit" value="Send" id="butGpu">
+					    </form>
+					</div>
+		 			<div class="graph_block block">
+		 				<canvas id="gpu_usage"></canvas>
+		 			</div>
+		 			<div class="graph_block block">
+		 				<canvas id="gpu_temp"></canvas>
+		 			</div>
+		 			<div>
+			 			<button id="reportGpu" data-value="gpu">Report</button>
+			 		</div>
+	 			</div> 			
+	 		</div>
+	 	</main>
+	 	<footer class="tab">
+	 	
+		</footer>
+	</body>
+</html>

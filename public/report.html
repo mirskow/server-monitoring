@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	 	<title>Server Statistics</title>
+	 	<link rel="stylesheet" href="/static/style.css">
+	 	<link rel="stylesheet" href="/static/report.css">
+	 	<script src="/static/report.js"></script>
+	 	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  		<script src="https://hammerjs.github.io/dist/hammer.min.js"></script>
+  		<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom/dist/chartjs-plugin-zoom.min.js"></script>
+	</head>
+	<body>
+		<header id="header" class="tab">
+			<div>Server Real Time</div>
+	 		<div id="server_time"></div>
+	 	</header>
+	 	<main>
+	 		<div class="title_block">
+	 			<p id="reportTitle">{{ param }}</p>
+	 			<hr>
+	 		</div>
+	 		<div class="report">
+	 			<div>
+					<form>
+					    <label for="interval">Выберите интервал для графика:</label>
+					    <select id="interval" name="interval">
+						<option value="1_min">1 минута</option>
+						<option value="1_hour">1 час</option>
+						<option value="1_day">1 день</option>
+					    </select>
+					    
+					    <label for="start_date">Дата начала:</label>
+					    <input type="date" id="start_date" name="start_date">
+					    
+					    <label for="end_date">Дата конца:</label>
+					    <input type="date" id="end_date" name="end_date">
+					    
+					    <button type="submit">Показать график</button>
+					</form>
+
+	 			</div>
+	 			<div class="report_block">
+	 				<div class="report_chart">
+	 					<canvas id="reportChart"></canvas>
+	 				</div>
+	 				<div class="report_chart">
+	 					<canvas id="reportTemp"></canvas>
+	 				</div>
+	 			</div>
+	 		</div>
+	 	</main>
+	 	<footer>
+	 	
+		</footer>
+	</body>
+</html>

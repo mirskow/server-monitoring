@@ -1,0 +1,12 @@
+.report_block {
+	display: flex;
+   	width: 100%;
+}
+
+.report_chart {
+	width: 50%;
+}
+
+.report{
+	padding: 20px;
+}
